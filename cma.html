@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>111-1975 Rosefield Rd — Comparative Market Analysis | Team Rajpal</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+:root{--navy:#08172F;--red:#DC1C2E;--blue:#004D9A;--grey:#A7A9AB;--ink:#10182B;--paper:#FFFFFF;--mist:#EEF1F4;--line:#D8DDE3;--wrap:1000px;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Crimson Text',Georgia,serif;color:var(--ink);background:var(--paper);font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+p{margin:0 0 1em}
+a{color:var(--blue)}
+
+/* hero */
+.hero{background:radial-gradient(1100px 520px at 50% -8%, #102a52 0%, rgba(16,42,82,0) 60%), var(--navy);color:#fff;padding:56px 0 44px;position:relative;}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:linear-gradient(90deg,var(--red) 0 50%,var(--blue) 50% 100%);}
+.hero .wrap{display:flex;gap:44px;align-items:center;flex-wrap:wrap}
+.hero .logo{width:96px;height:auto;margin-bottom:18px;filter:drop-shadow(0 8px 20px rgba(0,0,0,.4));}
+.hero .photo{flex:0 0 340px;border-radius:10px;overflow:hidden;box-shadow:0 18px 46px rgba(0,0,0,.4);aspect-ratio:4/3;}
+.hero .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.hero .info{flex:1;min-width:320px}
+.hero .mark{font-size:14px;letter-spacing:.34em;text-transform:uppercase;color:var(--grey);font-weight:600;margin:0 0 14px}
+.hero h1{font-size:clamp(32px,4.4vw,48px);font-weight:700;line-height:1.08;margin:0 0 6px}
+.hero .city{font-size:19px;color:#c7d3e6;font-style:italic;margin:0 0 22px}
+.hero .specs{display:flex;gap:26px;flex-wrap:wrap;margin:0 0 20px}
+.hero .specs .stat{min-width:88px}
+.hero .specs .stat .n{font-size:26px;font-weight:700;color:#fff}
+.hero .specs .stat .l{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.hero .factline{font-size:16px;color:#dfe6ef;line-height:1.6;margin:0 0 18px}
+.hero .factline b{color:#fff}
+.hero .agent{font-size:14.5px;color:var(--grey);line-height:1.7;border-top:1px solid rgba(255,255,255,.16);padding-top:16px;margin-top:6px}
+.hero .agent b{color:#fff}
+
+/* section shells */
+.section-head{background:var(--navy);color:#fff;padding:30px 0}
+.section-head .wrap{display:flex;align-items:baseline;gap:20px}
+.section-head .kicker{font-size:12.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--grey);font-weight:600;margin:0 0 6px}
+.section-head h2{font-size:clamp(24px,3.4vw,34px);font-weight:700;margin:0;line-height:1.08}
+.section-body{padding:44px 0 52px}
+.band-paper{background:var(--paper)}
+.band-mist{background:var(--mist)}
+
+/* stat grid */
+.stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin:6px 0 28px}
+.stat-grid .cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 16px;text-align:center}
+.stat-grid .cell .v{font-size:26px;font-weight:700;color:var(--navy);line-height:1.1;margin-bottom:6px}
+.stat-grid .cell .k{font-size:12px;letter-spacing:.06em;color:#5b6472;line-height:1.35}
+.temp-badge{display:flex;align-items:center;gap:14px;background:var(--navy);color:#fff;border-radius:10px;padding:18px 24px;margin-top:6px}
+.temp-badge .dot{width:14px;height:14px;border-radius:50%;background:var(--red);flex:none}
+.temp-badge .t1{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);margin-bottom:2px}
+.temp-badge .t2{font-size:20px;font-weight:700}
+@media(max-width:900px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* comp cards */
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:6px}
+.comp-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(16,24,43,.05)}
+.comp-card .photo{aspect-ratio:4/3;overflow:hidden;background:var(--mist)}
+.comp-card .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.comp-card .body{padding:20px 22px 22px}
+.comp-card .addr{font-size:20px;font-weight:700;color:var(--navy);margin:0 0 4px}
+.comp-card .price-row{display:flex;align-items:baseline;gap:10px;margin:2px 0 14px;flex-wrap:wrap}
+.comp-card .sold-price{font-size:17px;color:var(--ink);font-weight:700}
+.comp-card .sold-price .lbl{font-weight:400;color:#5b6472;font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.comp-card .adj-value{font-size:22px;color:var(--red);font-weight:700}
+.comp-card .adj-value .lbl{display:block;font-weight:400;color:#5b6472;font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.comp-card .list-price{font-size:20px;color:var(--ink);font-weight:700}
+.comp-card .list-price .lbl{font-weight:400;color:#5b6472;font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.comp-card .facts{font-size:14px;color:#5b6472;margin:0 0 14px}
+.comp-card .status-pill{display:inline-block;background:var(--mist);color:var(--navy);font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-left:8px}
+ul.diffs{list-style:none;margin:0;padding:0}
+ul.diffs li{position:relative;padding:0 0 0 20px;margin:0 0 7px;font-size:15px;line-height:1.42;color:#2a3142}
+ul.diffs li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;background:var(--red);transform:rotate(45deg)}
+
+/* value range section */
+.range-hero{text-align:center;padding:10px 0 8px}
+.range-hero .lbl{font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:#5b6472;margin-bottom:10px}
+.range-hero .num{font-size:clamp(36px,6vw,58px);font-weight:700;color:var(--navy)}
+.range-hero .num .to{color:var(--grey);font-weight:400;margin:0 14px;font-style:italic}
+.range-note{text-align:center;font-size:15.5px;color:#5b6472;font-style:italic;margin:8px 0 40px}
+
+.scale-wrap{margin:30px 0 46px;padding:34px 28px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.scale-track{position:relative;height:6px;background:var(--line);border-radius:3px;margin:130px 40px 130px}
+.scale-band{position:absolute;top:0;bottom:0;background:rgba(220,28,46,.18);border-radius:3px}
+.scale-marker{position:absolute;top:50%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:var(--navy);border:3px solid #fff;box-shadow:0 0 0 1px var(--line)}
+.scale-marker.sold{background:var(--red)}
+.scale-marker.active{background:var(--grey)}
+.scale-label{position:absolute;transform:translateX(-50%);text-align:center;font-size:12.5px;line-height:1.35;white-space:nowrap}
+.scale-label .amt{font-weight:700;color:var(--navy)}
+.scale-label .nm{color:#5b6472;font-size:11.5px}
+.scale-legend{display:flex;gap:26px;justify-content:center;font-size:12.5px;color:#5b6472;margin-top:8px}
+.scale-legend span{display:inline-flex;align-items:center;gap:6px}
+.scale-legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+.rationale p{font-size:17.5px;line-height:1.6;color:#2a3142;margin:0 0 18px}
+.rationale p:last-child{margin-bottom:0}
+
+.disclosure{background:var(--red);color:#fff;text-align:center;padding:26px 32px;margin:0}
+.disclosure p{margin:0;font-size:16.5px;line-height:1.55;font-weight:600;font-style:italic;max-width:820px;margin:0 auto}
+
+footer{background:var(--navy);color:#fff;padding:38px 0 46px;text-align:center}
+footer img{width:84px;height:auto;margin-bottom:14px}
+footer .fmark{font-size:12.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--grey);font-weight:600;margin:0 0 8px}
+footer .ftag{font-size:12.5px;letter-spacing:.28em;text-transform:uppercase}
+footer .fcontact{margin-top:16px;color:var(--grey);font-size:14.5px;line-height:1.7}
+
+@media(max-width:760px){
+  .hero .wrap{flex-direction:column}
+  .comp-grid{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <div class="photo"><img src="images/img-2ac6ed1d95ee679c.jpg" alt="111-1975 Rosefield Rd"></div>
+  <div class="info">
+    <img class="logo" src="images/img-c8599fd28760dd5b.png" alt="Team Rajpal">
+    <p class="mark">Comparative Market Analysis</p>
+    <h1>111-1975 Rosefield Rd</h1>
+    <p class="city">Pickering (Liverpool), Durham</p>
+    <p class="city" style="font-size:15px;color:var(--grey);font-style:normal;letter-spacing:.06em;text-transform:uppercase;margin-top:-10px">Prepared for Sarah &amp; TJ</p>
+    <div class="specs">
+      <div class="stat"><div class="n">3</div><div class="l">Bedrooms</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">Bathrooms</div></div>
+      <div class="stat"><div class="n">1,310</div><div class="l">Sqft Above Grade</div></div>
+      <div class="stat"><div class="n">1976</div><div class="l">Year Built</div></div>
+    </div>
+    <p class="factline"><b>Condo Townhouse, 2-Storey</b>, 1-Car Garage. Basement: Finished, with Rec Room.</p>
+    <p class="factline">Recent upgrades: Forced air heating &amp; cooling updated (2017); Powder room renovated; Gas fireplace in the living room; New washer &amp; dryer; Flat ceilings on the main floor; Newer light fixtures.</p>
+    <p class="agent"><b>Prepared by Xerxes Bharucha, Broker</b> &middot; RE/MAX Key2 Real Estate, Brokerage<br>
+    647-287-7059 &middot; 2460 Brock Rd #C206, Pickering ON L1X 0J1</p>
+  </div>
+</div></header>
+
+
+<div class="section-head"><div class="wrap"><p class="kicker">Section 1</p><h2>State of the Market</h2></div></div>
+<section class="section-body band-mist"><div class="wrap">
+  
+    <p class="lead" style="font-size:18px;color:#5b6472;margin-bottom:20px">Durham Region &middot; Condo Townhouse &middot; July 2026, the most recent full month on record.</p>
+    <div class="stat-grid"><div class="cell"><div class="v">$546,695</div><div class="k">Average Sale Price</div></div><div class="cell"><div class="v">$544,000</div><div class="k">Median Sale Price</div></div><div class="cell"><div class="v">98%</div><div class="k">Average Sale-to-List</div></div><div class="cell"><div class="v">37</div><div class="k">Average Days on Market</div></div><div class="cell"><div class="v">4.6</div><div class="k">Months of Inventory</div></div></div>
+    <div class="temp-badge"><div class="dot"></div><div><div class="t1">Current Market Temperature</div><div class="t2">Balanced Market, Leaning Toward Buyers</div></div></div>
+    <p style="margin-top:20px;font-size:16px;color:#5b6472;line-height:1.6">Homes are taking longer to sell than they were even a year ago, and the average sale is landing just under asking. Inventory has built up steadily since the start of 2025 &mdash; there&rsquo;s more for buyers to choose from, which means pricing accurately from day one matters more than it did in a tighter market.</p>
+    
+</div></section>
+
+
+<div class="section-head"><div class="wrap"><p class="kicker">Section 2</p><h2>What Sold</h2></div></div>
+<section class="section-body band-paper"><div class="wrap">
+  <p class="lead" style="font-size:17.5px;color:#5b6472;margin-bottom:24px">Four recent sales in Liverpool &mdash; three within a five-minute walk of 111-1975 Rosefield Rd, two in the same building complex. Each is shown at its sold price and, next to it, the value it points to once we account for how it differs from your home.</p>
+  <div class="comp-grid">
+    
+    <div class="comp-card">
+      <div class="photo"><img src="images/img-a8a1995e8bd2696a.jpg" alt="1975 Rosefield Rd #40"></div>
+      <div class="body">
+        <p class="addr">1975 Rosefield Rd #40</p>
+        <div class="price-row"><div class="sold-price"><span class="lbl">Sold</span>$625,500</div><div class="adj-value"><span class="lbl">Adjusted Value</span>$625,500</div></div>
+        <p class="facts">3 Bed &middot; 2 Bath &middot; 1,221 sqft above grade &middot; 18 DOM</p>
+        <ul class="diffs"><li>3-storey (subject is 2-storey)</li><li>Smaller: 1,221 sqft above grade vs. subject&rsquo;s 1,310</li><li>No fireplace</li><li>End unit</li><li>Same building complex as the subject</li></ul>
+      </div>
+    </div>
+    
+    <div class="comp-card">
+      <div class="photo"><img src="images/img-7eefc4a49a67fb1e.jpg" alt="1975 Memory Lane #16"></div>
+      <div class="body">
+        <p class="addr">1975 Memory Lane #16</p>
+        <div class="price-row"><div class="sold-price"><span class="lbl">Sold</span>$710,500</div><div class="adj-value"><span class="lbl">Adjusted Value</span>$630,500</div></div>
+        <p class="facts">3 Bed &middot; 4 Bath &middot; 1,172 sqft above grade &middot; 21 DOM</p>
+        <ul class="diffs"><li>Smaller: 1,172 sqft above grade</li><li>4 washrooms vs. subject&rsquo;s 2</li><li>Electric fireplace</li><li>Fully renovated throughout &mdash; new engineered flooring, new furnace &amp; AC, extensive updates</li></ul>
+      </div>
+    </div>
+    
+    <div class="comp-card">
+      <div class="photo"><img src="images/img-a67c85dc05791445.jpg" alt="1958 Rosefield Rd #30"></div>
+      <div class="body">
+        <p class="addr">1958 Rosefield Rd #30</p>
+        <div class="price-row"><div class="sold-price"><span class="lbl">Sold</span>$635,000</div><div class="adj-value"><span class="lbl">Adjusted Value</span>$620,000</div></div>
+        <p class="facts">3 Bed &middot; 2 Bath &middot; 1,256 sqft above grade &middot; 3 DOM</p>
+        <ul class="diffs"><li>3-storey (subject is 2-storey)</li><li>Slightly larger: 1,256 sqft above grade</li><li>No fireplace</li><li>Renovated kitchen, updated bathrooms</li><li>End unit</li><li>Sold in 3 days</li></ul>
+      </div>
+    </div>
+    
+    <div class="comp-card">
+      <div class="photo"><img src="images/img-6314d93f071d7553.jpg" alt="1415 Fieldlight Blvd #17"></div>
+      <div class="body">
+        <p class="addr">1415 Fieldlight Blvd #17</p>
+        <div class="price-row"><div class="sold-price"><span class="lbl">Sold</span>$665,000</div><div class="adj-value"><span class="lbl">Adjusted Value</span>$600,000</div></div>
+        <p class="facts">5 Bed &middot; 4 Bath &middot; 1,974 sqft above grade &middot; 47 DOM</p>
+        <ul class="diffs"><li>Significantly larger: 1,974 sqft above grade (664 sqft more than subject)</li><li>5 bedrooms (4+1) vs. subject&rsquo;s 3</li><li>4 washrooms vs. subject&rsquo;s 2, including one in the basement</li><li>New windows and roof (2025)</li></ul>
+      </div>
+    </div>
+    
+  </div>
+</div></section>
+
+
+<div class="section-head"><div class="wrap"><p class="kicker">Section 3</p><h2>What&rsquo;s Available</h2></div></div>
+<section class="section-body band-mist"><div class="wrap">
+  <p class="lead" style="font-size:17.5px;color:#5b6472;margin-bottom:24px">This is what buyers will be comparing your home against the moment it goes live &mdash; the current competition in Liverpool, at today&rsquo;s asking prices.</p>
+  <div class="comp-grid">
+    
+    <div class="comp-card">
+      <div class="photo"><img src="images/img-5d418c62f1c4ff88.jpg" alt="1415 Fieldlight Blvd #6"></div>
+      <div class="body">
+        <p class="addr">1415 Fieldlight Blvd #6</p>
+        <div class="price-row"><div class="list-price"><span class="lbl">List</span>$639,900</div></div>
+        <p class="facts">3 Bed &middot; 2 Bath &middot; 1,194 sqft above grade &middot; 65 DOM</p>
+        <ul class="diffs"><li>Smaller: 1,194 sqft above grade</li><li>Backs onto a park/greenbelt</li><li>New furnace (2024), granite counters</li></ul>
+      </div>
+    </div>
+    
+    <div class="comp-card">
+      <div class="photo"><img src="images/img-0071e6c860249432.jpg" alt="1415 Fieldlight Blvd #4"></div>
+      <div class="body">
+        <p class="addr">1415 Fieldlight Blvd #4</p>
+        <div class="price-row"><div class="list-price"><span class="lbl">List</span>$699,800</div></div>
+        <p class="facts">5 Bed &middot; 4 Bath &middot; 1,974 sqft above grade &middot; 47 DOM</p>
+        <ul class="diffs"><li>Significantly larger: 1,974 sqft above grade</li><li>5 bedrooms (4+1), 4 washrooms</li><li>Extensive recent updates &mdash; stairs, flooring, powder room, ensuite, crown moulding, shingles</li></ul>
+      </div>
+    </div>
+    
+    <div class="comp-card">
+      <div class="photo"><img src="images/img-a6d8ac1c2c89885c.jpg" alt="1975 Memory Lane #28"></div>
+      <div class="body">
+        <p class="addr">1975 Memory Lane #28</p>
+        <div class="price-row"><div class="list-price"><span class="lbl">List</span>$599,999</div></div>
+        <p class="facts">3 Bed &middot; 2 Bath &middot; 1,313 sqft above grade &middot; 23 DOM</p>
+        <ul class="diffs"><li>Comparable size: 1,313 sqft above grade</li><li>New furnace &amp; AC (Feb 2025), granite counters, stainless appliances</li></ul>
+      </div>
+    </div>
+    
+    <div class="comp-card">
+      <div class="photo"><img src="images/img-b22aa307813573fc.jpg" alt="1975 Rosefield Rd #98"></div>
+      <div class="body">
+        <p class="addr">1975 Rosefield Rd #98<span class="status-pill">SC &middot; Sold Conditional</span></p>
+        <div class="price-row"><div class="list-price"><span class="lbl">List</span>$638,800</div></div>
+        <p class="facts">4 Bed &middot; 2 Bath &middot; 1,221 sqft above grade &middot; 50 DOM</p>
+        <ul class="diffs"><li>Smaller: 1,221 sqft above grade</li><li>4 bedrooms (3+1, one in basement) vs. subject&rsquo;s 3</li><li>Gas fireplace</li><li>Same building complex as the subject &mdash; currently sold conditional, no firm price yet</li></ul>
+      </div>
+    </div>
+    
+  </div>
+</div></section>
+
+
+<div class="section-head"><div class="wrap"><p class="kicker">Section 4</p><h2>Recommended Value Range</h2></div></div>
+<section class="section-body band-paper"><div class="wrap">
+  <div class="range-hero">
+    <div class="lbl">Suggested Starting Range</div>
+    <div class="num">$600,000<span class="to">&mdash;</span>$630,000</div>
+  </div>
+  <p class="range-note">A starting point pulled from the numbers below &mdash; not a conclusion. Where we land after walking the home together may move this.</p>
+  
+    <div class="scale-wrap">
+      <div class="scale-track">
+        <div class="scale-band" style="left:15.38%;width:23.08%"></div>
+        <div class="scale-label" style="left:15.38%;bottom:30px"><div class="amt">$600,000</div><div class="nm">Fieldlight #17</div></div><div style="position:absolute;left:15.38%;bottom:8px;width:1px;height:22px;background:var(--line);transform:translateX(-50%)"></div><div class="scale-label" style="left:32.88%;bottom:78px"><div class="amt">$620,000–$625,500</div><div class="nm">Rosefield #30 &amp; #40</div></div><div style="position:absolute;left:32.88%;bottom:8px;width:1px;height:70px;background:var(--line);transform:translateX(-50%)"></div><div class="scale-label" style="left:38.85%;bottom:30px"><div class="amt">$630,500</div><div class="nm">Memory Lane #16</div></div><div style="position:absolute;left:38.85%;bottom:8px;width:1px;height:22px;background:var(--line);transform:translateX(-50%)"></div>
+        <div class="scale-marker sold" style="left:15.38%"></div><div class="scale-marker sold" style="left:32.88%"></div><div class="scale-marker sold" style="left:38.85%"></div>
+        <div class="scale-marker active" style="left:15.38%"></div><div class="scale-marker active" style="left:45.65%"></div><div class="scale-marker active" style="left:92.15%"></div>
+        <div class="scale-label" style="left:15.38%;top:30px"><div class="amt">$599,999</div><div class="nm">Memory Lane #28 (active)</div></div><div style="position:absolute;left:15.38%;top:8px;width:1px;height:22px;background:var(--line);transform:translateX(-50%)"></div><div class="scale-label" style="left:45.65%;top:78px"><div class="amt">$638,800–$639,900</div><div class="nm">Rosefield #98 (SC) &amp; Fieldlight #6</div></div><div style="position:absolute;left:45.65%;top:8px;width:1px;height:70px;background:var(--line);transform:translateX(-50%)"></div><div class="scale-label" style="left:92.15%;top:30px"><div class="amt">$699,800</div><div class="nm">Fieldlight #4 (active)</div></div><div style="position:absolute;left:92.15%;top:8px;width:1px;height:22px;background:var(--line);transform:translateX(-50%)"></div>
+      </div>
+      <div class="scale-legend">
+        <span><i style="background:var(--red)"></i>Sold comps (adjusted value)</span>
+        <span><i style="background:var(--grey)"></i>Active competition (list price, for context)</span>
+        <span><i style="background:rgba(220,28,46,.35)"></i>Recommended range for 111-1975 Rosefield Rd</span>
+      </div>
+    </div>
+    
+  <div class="rationale">
+    <p>We start with sold data, not asking prices &mdash; asking prices are opinions, sold prices are facts. Of the four comparable sales, three sit on Rosefield Rd and Memory Lane within a few minutes of your door, and two are in your own building complex. Once we account for what each one has that your home doesn&rsquo;t (or doesn&rsquo;t have that your home does) &mdash; extra washrooms, a full renovation, more square footage, an end-unit premium &mdash; those four sales point to adjusted values between $600,000 and $630,500.</p>
+    <p>That cluster is what sets the range. The low end reflects the largest, most heavily upgraded comparable in the set once its size premium is backed out; the high end reflects a fully renovated unit even after accounting for its smaller footprint. What&rsquo;s currently active in Liverpool &mdash; including another unit in your own building &mdash; is asking between $599,999 and $699,800, which tells us where the competition is positioning itself, though those are asking prices, not results yet.</p>
+    <p>We are not the market. The buyers are. This range is where the data points us today — we&rsquo;ll refine it once we&rsquo;ve walked through your home together and can factor in anything the brokersheets can&rsquo;t capture.</p>
+  </div>
+</div></section>
+
+
+<div class="disclosure"><p>This CMA is based on an online in depth search. We will adjust our recommendation on price, if need be, once we have done a physical walk through of your home.</p></div>
+
+
+<footer><div class="wrap">
+  <img src="images/img-c8599fd28760dd5b.png" alt="Team Rajpal">
+  <p class="fmark">Team Rajpal &middot; RE/MAX Key2 Real Estate, Brokerage</p>
+  <p class="ftag">You&rsquo;ll Love Coming Home&hellip;</p>
+  <p class="fcontact">Pickering (Seaton), Ontario &nbsp;|&nbsp; Sales &middot; Leasing &middot; Property Management<br>
+  Search &quot;Team Rajpal&quot; &middot; teamrajpal.com</p>
+</div></footer>
+
+</body></html>
